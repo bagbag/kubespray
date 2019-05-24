@@ -36,12 +36,12 @@ loadbalancer_apiserver_healthcheck_port: 8081
 ## for mounting persistent volumes into containers.  These may not be loaded by preinstall kubernetes
 ## processes.  For example, ceph and rbd backed volumes.  Set to true to allow kubelet to load kernel
 ## modules.
-# kubelet_load_modules: false
+kubelet_load_modules: true
 
 ## Upstream dns servers
-# upstream_dns_servers:
-#   - 8.8.8.8
-#   - 8.8.4.4
+upstream_dns_servers:
+  - 1.1.1.1
+  - 8.8.8.8
 
 ## There are some changes specific to the cloud providers
 ## for instance we need to encapsulate packets with some network plugins
